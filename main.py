@@ -1,4 +1,8 @@
-import random
+import random as rdm
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sb
 
 charms = input("Charms? Type 1 for yes or 0 for no: ")
 ch = False
@@ -10,31 +14,31 @@ normCount = 0
 eliteCount = 0
 nameCount = 0
 print("Calculating...")
-for i in range (1000000): 
+for i in range(1000000):
     if ch == False: #No Charm
-        if random.randint(0,49) == 0: #Elite chance
-            if random.randint(0,1499) == 0: #Named chance
+        if rdm.randint(0,49) == 0: #Elite chance
+            if rdm.randint(0,1499) == 0: #Named chance
                 hexCount += 1
                 nameCount += 1
             else: #Elite hex chance
-                if random.randint(0,1499) == 0:
+                if rdm.randint(0,1499) == 0:
                     hexCount += 1
                     eliteCount += 1
         else: #Normal Seeker
-            if random.randint(0,1499999) == 0:
+            if rdm.randint(0,1499999) == 0:
                 hexCount += 1
                 normCount += 1
     else: # Seeker charm chance
-        if random.randint(0,9) == 0: #Elite chance
-            if random.randint(0,1499) == 0: #Named chance
+        if rdm.randint(0,9) == 0: #Elite chance
+            if rdm.randint(0,1499) == 0: #Named chance
                 hexCount += 1
                 nameCount += 1
             else: #Elite hex chance
-                if random.randint(0,1499) == 0:
+                if rdm.randint(0,1499) == 0:
                     hexCount += 1
                     eliteCount += 1
         else: #Normal Seeker
-            if random.randint(0,1499999) == 0:
+            if rdm.randint(0,1499999) == 0:
                 hexCount += 1
                 normCount += 1
 
