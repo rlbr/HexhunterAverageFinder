@@ -18,7 +18,12 @@ def hexRollsTrue():  # Seeker charm chance
             if rdm.randint(0, 1499999) == 0:
                 hexCount += 1
                 normCount += 1
-    return hexCount
+    if hexCount != 0:
+        bowsAverage = 100000/hexCount
+    else:
+        bowsAverage = 0
+    values = [hexCount,bowsAverage,normCount,eliteCount,nameCount]
+    return values
 
 
 def hexRollsFalse():  # No charm
@@ -39,4 +44,9 @@ def hexRollsFalse():  # No charm
             if rdm.randint(0, 1499999) == 0:
                 hexCount += 1
                 normCount += 1
-    return hexCount
+    if hexCount != 0:
+        bowsAverage = 100000/hexCount
+    else:
+        bowsAverage = 0
+    values = [hexCount,bowsAverage,normCount,eliteCount,nameCount]
+    return values
