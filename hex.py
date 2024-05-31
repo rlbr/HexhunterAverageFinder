@@ -7,12 +7,10 @@ def hexRollsTrue():  # Seeker charm chance
         if rdm.randrange(10) == 0:  # Elite chance
             if rdm.randrange(1_500) == 0:  # Named chance
                 hexCount += 1
-            else:  # Elite hex chance
-                if rdm.randrange(1_500) == 0:
-                    hexCount += 1
-        else:  # Normal Seeker
-            if rdm.randrange(1_500_000) == 0:
+            elif rdm.randrange(1_500) == 0:  # Elite hex chance
                 hexCount += 1
+        elif rdm.randrange(1_500_000) == 0:  # Normal Seeker
+            hexCount += 1
     if hexCount != 0:
         bowsAverage = 100_000 / hexCount
     else:
@@ -27,12 +25,10 @@ def hexRollsFalse():  # No charm
         if rdm.randrange(50) == 0:  # Elite chance
             if rdm.randrange(1_500) == 0:  # Named chance
                 hexCount += 1
-            else:  # Elite hex chance
-                if rdm.randrange(1_500) == 0:
-                    hexCount += 1
-        else:  # Normal Seeker
-            if rdm.randrange(1_500_000) == 0:
+            elif rdm.randrange(1_500) == 0:  # Elite hex chance
                 hexCount += 1
+        elif rdm.randrange(1_500_000) == 0:  # Normal Seeker
+            hexCount += 1
     if hexCount != 0:
         bowsAverage = 100_000 / hexCount
     else:
