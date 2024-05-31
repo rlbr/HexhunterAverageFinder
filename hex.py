@@ -1,7 +1,7 @@
 import random as rdm
 
 
-def hexRollsTrue():  # Seeker charm chance
+def hexRollsTrue(_=None):  # Seeker charm chance
     hexCount = 0
     for i in range(100_000):
         if rdm.randrange(10) == 0:  # Elite chance
@@ -15,11 +15,11 @@ def hexRollsTrue():  # Seeker charm chance
         bowsAverage = 100_000 / hexCount
     else:
         bowsAverage = 0
-    values = [hexCount, "True", bowsAverage]
+    values = [hexCount, True, bowsAverage]
     return values
 
 
-def hexRollsFalse():  # No charm
+def hexRollsFalse(_=None):  # No charm
     hexCount = 0
     for i in range(100_000):
         if rdm.randrange(50) == 0:  # Elite chance
@@ -33,5 +33,5 @@ def hexRollsFalse():  # No charm
         bowsAverage = 100_000 / hexCount
     else:
         bowsAverage = 0
-    values = [hexCount, "False", bowsAverage]
+    values = [hexCount, False, bowsAverage]
     return values
